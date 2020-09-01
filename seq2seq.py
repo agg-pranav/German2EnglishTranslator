@@ -111,7 +111,7 @@ learning_rate = 0.001
 batch_size = 64
 
 # model hyperparameters
-load_model =True
+load_model =False
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 input_size_encoder = len(german.vocab)
 input_size_decoder = len(english.vocab)
@@ -144,11 +144,11 @@ pad_idx = english.vocab.stoi['<pad>']
 criterion = nn.CrossEntropyLoss(ignore_index = pad_idx)
 
 if load_model:
-    load_checkpoint(torch.load("my_checkpoint.pth.tar"),model,optimizer,map_location=torch.device('cpu'))
+    load_checkpoint(torch.load("my_checkpoint.pth.tar",,map_location=torch.device('cpu')),model,optimizer)
     print("Model Loaded..")
 
 step = 0
-train = False
+train = True
 
 if train:
     for epoch in range(num_epochs):
@@ -177,6 +177,6 @@ if train:
 
             writer.add_scalar('Training loss: ',loss,global_step =step)
             step+=1
-sen = "Hey Leute, mir geht es gut"
-y = translate_sentence(model, sen, german,english, device, max_length=50)
+sen = "Hey Leute, mir geht es gut."
+y = translate_sentence(model, sen, german,english, device, max_length=25)
 print(y)
