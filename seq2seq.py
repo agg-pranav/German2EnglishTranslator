@@ -106,7 +106,7 @@ class Seq2Seq(nn.Module):
         return outputs
 
 # training hyperparameters
-num_epochs= 3
+num_epochs= 50
 learning_rate = 0.001
 batch_size = 64
 
