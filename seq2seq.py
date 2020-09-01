@@ -111,7 +111,7 @@ learning_rate = 0.001
 batch_size = 64
 
 # model hyperparameters
-load_model =False
+load_model = False
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 input_size_encoder = len(german.vocab)
 input_size_decoder = len(english.vocab)
