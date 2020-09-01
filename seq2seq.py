@@ -106,12 +106,12 @@ class Seq2Seq(nn.Module):
         return outputs
 
 # training hyperparameters
-num_epochs= 3
+num_epochs= 50
 learning_rate = 0.001
 batch_size = 64
 
 # model hyperparameters
-load_model =True
+load_model =False
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 input_size_encoder = len(german.vocab)
 input_size_decoder = len(english.vocab)
@@ -148,7 +148,7 @@ if load_model:
     print("Model Loaded..")
 
 step = 0
-train = False
+train = True
 
 if train:
     for epoch in range(num_epochs):
