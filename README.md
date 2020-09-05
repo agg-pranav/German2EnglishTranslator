@@ -5,5 +5,8 @@
 Metric used for evaluation: Bleu Score
 
 Ways to improving model:-
-- Using Attention  (*currently working)
-- Use Transformers
+- Using Attention  
+- Use Transformers  (*currently working)
+
+### seq2seq_attn.py: Applied Attention to previous Seq2Seq model
+Achieved Blue score of 25% with 50 epochs.
