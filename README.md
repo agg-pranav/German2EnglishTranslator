@@ -9,7 +9,7 @@ Ways to improving model:-
 - Use Transformers 
 - Tuning Hyperparameters
 - Increasing No. of Epochs
-- Using Pre-trained Transformer model
+- Using Pre-trained Transformer model(Transfer Learning)
 
 #### seq2seq_attn.py: Applied Attention to previous Seq2Seq model
 Achieved Blue score of 25% with 50 epochs.
