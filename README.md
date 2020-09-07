@@ -6,7 +6,16 @@ Metric used for evaluation: Bleu Score
 
 Ways to improving model:-
 - Using Attention  
-- Use Transformers  (*currently working)
+- Use Transformers 
+- Tuning Hyperparameters
+- Increasing No. of Epochs
+- Using Pre-trained Transformer model
 
-### seq2seq_attn.py: Applied Attention to previous Seq2Seq model
+#### seq2seq_attn.py: Applied Attention to previous Seq2Seq model
 Achieved Blue score of 25% with 50 epochs.
+
+### transformers.py: Used Transformer model for machine translation
+Achieved Blue score of 28.4% with 50 epochs
+
+
+(*see code for hyperparameters used)
